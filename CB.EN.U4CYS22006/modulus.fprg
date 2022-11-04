@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22006"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 11:13:15 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAwNjsyMDIyMjNNQVlDMDA0MjsyMDIyLTExLTA0OzEwOjUwOjAyIEFNOzMwNDI="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAwNjsyMDIyMjNNQVlDMDA0MjsyMDIyLTExLTA0OzExOjEzOjE1IEFNOzI7MzE1NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="here, we are going to find modulus. it is nothing but remainder between 2 integers."/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the value of a&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;enter the value of b&quot;" newline="True"/>
+            <input variable="b"/>
+            <declare name="q" type="Integer" array="False" size=""/>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <assign variable="q" expression="a/b"/>
+            <comment text="here, we are using the divisor, dividend and quoitent to find remainder."/>
+            <assign variable="r" expression="a-(b*q)"/>
+            <output expression="&quot;mod is&quot;" newline="True"/>
+            <output expression="r" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
