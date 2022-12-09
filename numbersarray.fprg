@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:42:53 AM"/>
+        <attribute name="created" value="dXNlcjtSQUFTOzIwMjItMTItMDk7MDk6MDk6MzUgQU07MjAxNQ=="/>
+        <attribute name="edited" value="dXNlcjtSQUFTOzIwMjItMTItMDk7MDk6MTg6MjMgQU07MTsyMTIw"/>
+        <attribute name="edited" value="QW5hbnRoO0RFU0tUT1AtOEQ2U1ZFRzsyMDIyLTEyLTA5OzA5OjQyOjUzIEFNOzE7MzA1MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numbers" type="Integer" array="True" size="10"/>
+            <declare name="no, i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;ENTER ELEMENT NUMBER &quot;&amp;i+1&amp; &quot; OF THE ARRAY.&quot;" newline="True"/>
+                <input variable="no"/>
+                <assign variable="numbers[i]" expression="no"/>
+            </for>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;ELEMENT NUMBER &quot;&amp;i+1&amp; &quot; OF THE ARRAY IS &quot;&amp;numbers[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

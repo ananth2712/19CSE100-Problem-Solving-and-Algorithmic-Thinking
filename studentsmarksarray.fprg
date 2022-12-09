@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ananth"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 10:44:20 AM"/>
+        <attribute name="created" value="QW5hbnRoO0RFU0tUT1AtOEQ2U1ZFRzsyMDIyLTEyLTA5OzA5OjQ3OjAxIEFNOzI5NDA="/>
+        <attribute name="edited" value="QW5hbnRoO0RFU0tUT1AtOEQ2U1ZFRzsyMDIyLTEyLTA5OzEwOjMzOjQwIEFNOzM7ZGVlcGFrO0RFRVBBS0tVTUFSOzIwMjItMTItMDk7MDk6Mjc6MTMgQU07U3R1ZGVudHNNYXJrUmVjb3JkXzkxMTIwMjJbMV0uZnByZzs4ODcz"/>
+        <attribute name="edited" value="QW5hbnRoO0RFU0tUT1AtOEQ2U1ZFRzsyMDIyLTEyLTA5OzEwOjQ0OjIwIEFNOzI7MzAzOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="students" type="Integer" array="False" size=""/>
+            <output expression="&quot; Enter the total number of students&quot;" newline="True"/>
+            <input variable="students"/>
+            <declare name="marks, total, average" type="Integer" array="True" size="5"/>
+            <declare name="i, x, iroll, imarks, itotal, iaverage" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="students" direction="inc" step="1">
+                <output expression="&quot;Enter the roll number of student&quot;&amp;i+1&amp;&quot;&quot;" newline="True"/>
+                <input variable="iroll"/>
+                <for variable="x" start="0" end="4" direction="inc" step="1">
+                    <output expression="&quot;Enter the marks for subject&quot;&amp;x+1&amp;&quot;&quot;" newline="True"/>
+                    <input variable="marks[x]"/>
+                </for>
+                <assign variable="itotal" expression="0"/>
+                <for variable="x" start="0" end="4" direction="inc" step="1">
+                    <assign variable="itotal" expression="itotal+marks[x]"/>
+                </for>
+                <output expression="&quot;Roll no:&quot;&amp;iroll" newline="True"/>
+                <for variable="x" start="0" end="4" direction="inc" step="1">
+                    <output expression="&quot;Your mark in Subject &quot;&amp;x+1&amp;&quot; is&quot; &amp;marks[x]" newline="True"/>
+                </for>
+                <output expression="&quot;Your total marks is:&quot;&amp;itotal" newline="True"/>
+                <output expression="&quot;The average is :&quot;&amp;itotal/5" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
