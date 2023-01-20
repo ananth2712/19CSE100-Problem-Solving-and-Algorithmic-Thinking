@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22006"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:53:13 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAwNjsyMDIyMjNNQVlDMDA0MzsyMDIzLTAxLTIwOzA5OjAzOjU5IEFNOzMwNTk="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAwNjsyMDIyMjNNQVlDMDA0MzsyMDIzLTAxLTIwOzEwOjUzOjEzIEFNOzM7MzE1Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="5"/>
+            <declare name="i, j, k, n" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;enter the numbers&quot;" newline="True"/>
+                <input variable="a[i]"/>
+            </for>
+            <comment text="user input of the numbers is collected"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <comment text="nested loop is created to take minimum value"/>
+                <for variable="j" start="0" end="4" direction="inc" step="1">
+                    <assign variable="n" expression="a[i]"/>
+                    <assign variable="k" expression="a[j]"/>
+                    <if expression="a[i]&gt;a[j]">
+                        <then>
+                            <assign variable="a[j]" expression="n"/>
+                            <assign variable="a[i]" expression="k"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <comment text="output is printed "/>
+                <output expression="a[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

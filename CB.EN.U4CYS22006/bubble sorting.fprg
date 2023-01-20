@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22006"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 11:01:12 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAwNjsyMDIyMjNNQVlDMDA0MzsyMDIzLTAxLTIwOzEwOjQyOjEwIEFNOzMwNDE="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAwNjsyMDIyMjNNQVlDMDA0MzsyMDIzLTAxLTIwOzEwOjQyOjEzIEFNOzE7Q0IuRU4uVTRDWVMyMjAwNjsyMDIyMjNNQVlDMDA0MzsyMDIzLTAxLTIwOzA5OjAzOjU5IEFNO3NvcnRpbmcuZnByZzs3NTgw"/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAwNjsyMDIyMjNNQVlDMDA0MzsyMDIzLTAxLTIwOzExOjAxOjEyIEFNOzQ7MzE1MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="True" size="10"/>
+            <declare name="i, j, k, w" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;enter the numbers&quot;" newline="True"/>
+                <input variable="a[i]"/>
+            </for>
+            <comment text="user input is collected"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <comment text="takes values and compare it with succesive input/values "/>
+                <for variable="j" start="0" end="3" direction="inc" step="1">
+                    <assign variable="w" expression="a[j]"/>
+                    <assign variable="k" expression="a[j+1]"/>
+                    <if expression="a[j]&gt;a[j+1]">
+                        <then>
+                            <assign variable="a[j+1]" expression="k"/>
+                            <assign variable="a[j]" expression="w"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <comment text="output is printed"/>
+                <output expression="a[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
