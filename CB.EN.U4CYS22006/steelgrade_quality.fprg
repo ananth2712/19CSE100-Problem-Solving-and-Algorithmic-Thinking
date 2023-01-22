@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ananth"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-22 09:59:11 AM"/>
+        <attribute name="created" value="QW5hbnRoO0RFU0tUT1AtOEQ2U1ZFRzsyMDIzLTAxLTIyOzA5OjU2OjM5IEFNOzI5NDU="/>
+        <attribute name="edited" value="QW5hbnRoO0RFU0tUT1AtOEQ2U1ZFRzsyMDIzLTAxLTIyOzA5OjU4OjI2IEFNOzE7dXNlcjtSQUFTOzIwMjMtMDEtMDY7MTA6NDU6MzcgUE07c3RlZWxncmFkZSByYW0uZnByZzs3MDc0"/>
+        <attribute name="edited" value="QW5hbnRoO0RFU0tUT1AtOEQ2U1ZFRzsyMDIzLTAxLTIyOzA5OjU5OjExIEFNOzE7MzA0Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter number of steels that you would like to grade.&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="conditions" type="Real" array="True" size="3"/>
+            <declare name="hardness, tensile, grade" type="Integer" array="False" size=""/>
+            <declare name="carbon" type="Real" array="False" size=""/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;enter the hardness of steel &quot;&amp;i+1" newline="True"/>
+                <input variable="hardness"/>
+                <while expression="hardness&lt;=0">
+                    <output expression="&quot;hardness of steel is always greater than 0. please enter valid hardness of steel.&quot;" newline="True"/>
+                    <input variable="hardness"/>
+                </while>
+                <assign variable="conditions[0]" expression="hardness"/>
+                <output expression="&quot;enter the tensile strength of steel &quot;&amp;i+1" newline="True"/>
+                <input variable="tensile"/>
+                <while expression="tensile&lt;=0">
+                    <output expression="&quot;tensile strength of steel is always greater than 0. please enter valid tensile strength of steel.&quot;" newline="True"/>
+                    <input variable="tensile"/>
+                </while>
+                <assign variable="conditions[1]" expression="tensile"/>
+                <output expression="&quot;enter the carbon content of steel &quot;&amp;i+1" newline="True"/>
+                <input variable="carbon"/>
+                <while expression="carbon&lt;0 || carbon&gt;100">
+                    <output expression="&quot;carbon content of steel always lies between 0 and 100. please enter valid tensile strength of steel.&quot;" newline="True"/>
+                    <input variable="carbon"/>
+                </while>
+                <assign variable="conditions[2]" expression="carbon"/>
+                <assign variable="grade" expression="gradesteel(conditions)"/>
+                <output expression="&quot;Grade of steel &quot; &amp;i+1&amp; &quot;is &quot; &amp;grade" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
